@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoanSetu Admin — Dashboard</title>
+    <meta
+      name="description"
+      content="Admin dashboard for managing loan applications."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="admin-frontend.css">
+  </head>
+  <body>
+    <!-- LOGIN -->
+    <div class="login-wrap" id="loginWrap">
+      <div class="login-card">
+        <h2>Admin Login</h2>
+        <p>Sign in to manage loan applications</p>
+        <form id="loginForm">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" id="username" required autocomplete="username" />
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input
+              type="password"
+              id="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <button class="btn btn-primary full" type="submit" id="loginBtn">
+            Sign In
+          </button>
+          <div class="err-msg" id="loginErr"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dash" id="dash">
+      <header class="bar">
+        <div class="logo">LoanSetu Admin</div>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <span id="who" style="color: #64748b; font-size: 0.9rem"></span>
+          <button class="btn btn-ghost" onclick="logout()">Logout</button>
+        </div>
+      </header>
+
+      <main>
+        <div class="stats" id="stats"></div>
+
+        <div class="filters">
+          <div class="field" style="margin: 0">
+            <label>Search by Name</label>
+            <input type="text" id="fName" placeholder="Type a name..." />
+          </div>
+          <div class="field" style="margin: 0">
+            <label>Date</label>
+            <input type="date" id="fDate" />
+          </div>
+          <div class="field" style="margin: 0">
+            <label>Status</label>
+            <select id="fStatus">
+              <option value="">All</option>
+              <option value="Pending">Pending</option>
+              <option value="Approved">Approved</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </div>
+          <button class="btn btn-ghost" onclick="clearFilters()">Reset</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Loan</th>
+                <th>Amount</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <div class="empty" id="empty" style="display: none">
+            No customers found.
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h3>Edit Customer</h3>
+          <button class="close" onclick="closeEdit()">×</button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="eId" />
+          <div class="row2">
+            <div class="field"><label>Name</label><input id="eName" /></div>
+            <div class="field">
+              <label>Email</label><input id="eEmail" type="email" />
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field"><label>Phone</label><input id="ePhone" /></div>
+            <div class="field"><label>City</label><input id="eCity" /></div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label>Loan Type</label><input id="eLoan" />
+            </div>
+            <div class="field">
+              <label>Amount (₹)</label><input id="eAmount" type="number" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Status</label>
+            <select id="eStatus">
+              <option>Pending</option>
+              <option>Approved</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn btn-ghost" onclick="closeEdit()">Cancel</button>
+          <button class="btn btn-primary" onclick="saveEdit()">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal" id="delModal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h3>Confirm Delete</h3>
+          <button class="close" onclick="closeDel()">×</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Are you sure you want to permanently delete <b id="delName"></b>'s
+            application? This action cannot be undone.
+          </p>
+        </div>
+        <div class="modal-foot">
+          <button class="btn btn-ghost" onclick="closeDel()">Cancel</button>
+          <button class="btn btn-danger" onclick="confirmDel()">
+            Yes, Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+   <script src="admin-frontend.js"></script>
+  </body>
+</html>

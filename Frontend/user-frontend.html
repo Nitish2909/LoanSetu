@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoanSetu — Compare & Apply Loans from Top Indian Banks</title>
+    <meta
+      name="description"
+      content="Apply for Home, Car, Personal, Education, Business, Gold & Land loans from 25+ partner Indian banks. Quick approval, lowest interest rates, 100% online process."
+    />
+    <meta
+      name="keywords"
+      content="loan, home loan, car loan, personal loan, india, sbi, hdfc, icici, axis bank, loan apply online"
+    />
+    <meta name="author" content="LoanSetu" />
+    <meta
+      property="og:title"
+      content="LoanSetu — Compare & Apply Loans from Top Indian Banks"
+    />
+    <meta
+      property="og:description"
+      content="Get the best loan offers from 25+ Indian banks in minutes."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "LoanSetu",
+        "description": "Loan aggregator partnered with leading Indian banks",
+        "areaServed": "IN"
+      }
+    </script>
+    <link rel="stylesheet" href="user-frontend.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="logo">LoanSetu</div>
+        <ul id="navMenu">
+          <li><a href="#loans">Loans</a></li>
+          <li><a href="#banks">Partner Banks</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#how">How it Works</a></li>
+          <li><a class="cta" href="#loans">Apply Now</a></li>
+        </ul>
+        <button
+          class="burger"
+          onclick="document.getElementById('navMenu').classList.toggle('open')"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Loans Made Simple. <br />Approval Made Fast.</h1>
+          <p>
+            Compare and apply for loans from 25+ leading Indian banks. Lowest
+            interest rates, instant eligibility check, and 100% paperless
+            process.
+          </p>
+          <div class="hero-btns">
+            <button
+              class="btn btn-primary"
+              onclick="document.getElementById('loans').scrollIntoView()"
+            >
+              Explore Loans
+            </button>
+            <a class="btn btn-ghost" href="#banks">View Partner Banks</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Trusted by Thousands</h3>
+          <p style="opacity: 0.9; font-size: 0.95rem">
+            India's fastest growing loan aggregator platform.
+          </p>
+          <div class="stats">
+            <div class="stat"><b>15+</b><span>Partner Banks</span></div>
+            <div class="stat"><b>1k+</b><span>Happy Customers</span></div>
+            <div class="stat"><b>₹50Cr+</b><span>Loans Disbursed</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="loans">
+      <div class="container">
+        <div class="section-head">
+          <h2>Choose Your <span>Loan Type</span></h2>
+          <p>
+            Pick the loan that fits your goal. Tap any card to start your
+            application — it takes less than 2 minutes.
+          </p>
+        </div>
+        <div class="loan-grid" id="loanGrid"></div>
+      </div>
+    </section>
+
+    <section class="banks" id="banks">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our <span>Partner Banks</span></h2>
+          <p>
+            We are partnered with India's most trusted banks and NBFCs to bring
+            you the best loan offers.
+          </p>
+        </div>
+        <div class="bank-grid" id="bankGrid"></div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why Choose <span>LoanSetu</span></h2>
+          <p>We simplify lending so you can focus on what matters.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat">
+            <div class="ic">⚡</div>
+            <h3>Quick Approval</h3>
+            <p>
+              Get loan approval in as little as 24 hours with minimal
+              documentation.
+            </p>
+          </div>
+          <div class="feat">
+            <div class="ic">💰</div>
+            <h3>Lowest Interest</h3>
+            <p>We negotiate the best rates from 25+ banks so you save more.</p>
+          </div>
+          <div class="feat">
+            <div class="ic">🔒</div>
+            <h3>100% Secure</h3>
+            <p>Bank-grade encryption keeps your personal information safe.</p>
+          </div>
+          <div class="feat">
+            <div class="ic">📱</div>
+            <h3>Paperless Process</h3>
+            <p>Apply, upload and track your loan completely online.</p>
+          </div>
+          <div class="feat">
+            <div class="ic">🤝</div>
+            <h3>Dedicated Support</h3>
+            <p>Personal loan advisor to guide you at every step.</p>
+          </div>
+          <div class="feat">
+            <div class="ic">✅</div>
+            <h3>No Hidden Charges</h3>
+            <p>Transparent pricing — what you see is what you pay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2>How It <span>Works</span></h2>
+          <p>From application to disbursal in 4 easy steps.</p>
+        </div>
+        <div class="step-grid">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Choose Loan</h3>
+            <p>Select the type of loan you need.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Fill Details</h3>
+            <p>Provide basic personal & income information.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Get Matched</h3>
+            <p>We compare offers from partner banks.</p>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <h3>Get Funded</h3>
+            <p>Approval & disbursal directly into your account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <div class="logo" style="margin-bottom: 10px">LoanSetu</div>
+            <p style="font-size: 0.9rem">
+              India's trusted online loan aggregator helping millions get loans
+              from top banks at the best interest rates.
+            </p>
+          </div>
+          <div>
+            <h4>Loans</h4>
+            <ul>
+              <li>Home Loan</li>
+              <li>Car Loan</li>
+              <li>Personal Loan</li>
+              <li>Education Loan</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Press</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>help@loansetu.in</li>
+              <li>+91 1800-123-4567</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">© 2026 LoanSetu. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-box">
+        <div class="modal-head">
+          <h3 id="modalTitle">Apply for Loan</h3>
+          <button class="close" onclick="closeModal()">×</button>
+        </div>
+        <form id="loanForm" novalidate>
+          <input type="hidden" id="loanType" name="loanType" />
+          <div class="field">
+            <label>Full Name *</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Rahul Sharma"
+            />
+            <div class="error">
+              Please enter your full name (min 3 characters, letters only).
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label>Email *</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@example.com"
+              />
+              <div class="error">Enter a valid email address.</div>
+            </div>
+            <div class="field">
+              <label>Phone *</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="10-digit mobile"
+                maxlength="10"
+              />
+              <div class="error">
+                Enter a valid 10-digit Indian mobile number.
+              </div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label>PAN Number *</label>
+              <input
+                type="text"
+                name="pan"
+                id="pan"
+                placeholder="ABCDE1234F"
+                maxlength="10"
+                style="text-transform: uppercase"
+              />
+              <div class="error">Enter a valid PAN (e.g. ABCDE1234F).</div>
+            </div>
+            <div class="field">
+              <label>Date of Birth *</label>
+              <input type="date" name="dob" id="dob" />
+              <div class="error">You must be at least 18 years old.</div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label>Loan Amount (₹) *</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                placeholder="500000"
+                min="10000"
+              />
+              <div class="error">Enter an amount of at least ₹10,000.</div>
+            </div>
+            <div class="field">
+              <label>Monthly Income (₹) *</label>
+              <input
+                type="number"
+                name="income"
+                id="income"
+                placeholder="50000"
+                min="5000"
+              />
+              <div class="error">
+                Enter a valid monthly income (min ₹5,000).
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>City *</label>
+            <input type="text" name="city" id="city" placeholder="Mumbai" />
+            <div class="error">Please enter your city.</div>
+          </div>
+          <div class="field">
+            <label>Additional Notes</label>
+            <textarea
+              name="notes"
+              id="notes"
+              rows="2"
+              placeholder="Optional"
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="user-frontend.js"></script>
+  </body>
+</html>
