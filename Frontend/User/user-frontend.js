@@ -1,5 +1,6 @@
    // CONFIG — change to your deployed backend URL
-      const API_BASE = "http://localhost:5000/api";
+      // const API_BASE = "http://localhost:5000/api";
+      const API_BASE = "https://loansetu-soqg.onrender.com/api";
 
       const LOANS = [
         {
