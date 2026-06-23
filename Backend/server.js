@@ -11,7 +11,9 @@ const customerRoutes = require('./routes/customerRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [process.env.CLIENT_URL, process.env.ADMIN_URL]
+}));
 app.use(cookieParser());
 app.use(express.json());
 
